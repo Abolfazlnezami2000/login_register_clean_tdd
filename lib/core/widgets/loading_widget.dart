@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'basic_container.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({
@@ -7,11 +8,13 @@ class LoadingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height / 3,
-      child: Center(
-        child: CircularProgressIndicator(),
-      ),
-    );
+    return BasicContainer(builder: (context, screenInfo) {
+      return Container(
+        height: screenInfo.height / 3,
+        child: Center(
+          child: CircularProgressIndicator(),
+        ),
+      );
+    });
   }
 }

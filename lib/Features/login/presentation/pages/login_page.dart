@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login_register_clean_tdd/Features/login/presentation/bloc/login_bloc.dart';
-import 'package:login_register_clean_tdd/Features/login/presentation/bloc/login_state.dart';
+import 'package:login_register_clean_tdd/Features/login/presentation/bloc/login_State.dart';
 import 'package:login_register_clean_tdd/Features/login/presentation/widgets/login_controls.dart';
 import 'package:login_register_clean_tdd/core/widgets/loading_widget.dart';
 import 'package:login_register_clean_tdd/core/widgets/message_display.dart';
@@ -29,7 +29,7 @@ class LoginPage extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              SizedBox(height: 10),
+              //SizedBox(height: 10),
               // Top half
               BlocBuilder<LoginBloc, LoginState>(
                 // ignore: missing_return
@@ -49,7 +49,7 @@ class LoginPage extends StatelessWidget {
                   }
                 },
               ),
-              SizedBox(height: 20),
+              //SizedBox(height: 20),
               // Bottom half
               LoginControls()
             ],
